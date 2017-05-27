@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+//		var x=1,y=0,z=0;
+//		function add(n){
+//			n=n+1;
+//		}
+//		y=add(x);
+//		function add(n){
+//			n=n+3;
+//		}
+//		z=add(x);
+//		console.log(y);
+//		var a=null;
+		var bb=1;
+		function aa(bb){
+			bb=2;
+			alert(bb)
+		}
+		aa(bb)
+		alert(bb);
+		
+		for(var i=1;i<10;i++){
+			setTimeout(fn(i),i*1000);
+		}
+		function fn(a){
+			return function(){
+				console.log(a);
+			}
+			
+		}
+		this 指向
+		1.在定时器中使用指向window;
+		2.在对象中函数中使用时   指向该对象;
+		3.由事件调用并以赋值的方式时 指向调用该方法的元素
+		</script>
+	</body>
+</html>
