@@ -80,9 +80,11 @@ window.onload=function(){
 		ev =ev.changedTouches[0];
 		startX = ev.pageX;
 	}
+	var dianspan = document.querySelectorAll(".dian>span");
 	function end(ev){
 		ev =ev.changedTouches[0];
 		endX = ev.pageX;
+		dianspan[num].className = "";
 		if(endX-startX>ww/4&&num==1){
 			mynav.style.transform ="translate("+0+"px)";
 			num=0;
@@ -90,6 +92,8 @@ window.onload=function(){
 			mynav.style.transform ="translate("+(-ww)+"px)";
 			num=1;
 		}
+		dianspan[num].className = "choose";
+		
 	}
 	var step =document.querySelector(".step");
 	var spanlist=step.querySelectorAll("span");
